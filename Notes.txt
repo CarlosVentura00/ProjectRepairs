@@ -1,0 +1,22 @@
+To run this project you will need to store the dabase "HitachiRepairs" on sql server
+(thats what i used).
+
+After that, open the project solution, you might need to install the dependencies.
+
+
+For the API connection to work, go to the "appsettings.json" and change the line
+"DefaultConnection: "data source= your database connection" (you can find it on the "connect"
+button on sql server, a small window will popup, select the "server name" field and copy it)
+
+The API connection runs through "http://localhost:3000", if you have this port blocked/in use
+you might need to change the port. For that open the "Startup.cs" on the "configure" method
+you will find the line to change it.
+
+When you click on the "run button" on visual studio, the app will open the browser.
+On the url field you might see something like "localhost:44374" if this is not the port for you
+then on the project, go to "ClientApp/src/containers/Requests.jsx" there you will see
+close to the top "fetch(.......)", change the localhost port to the one that appears in your
+browser.
+
+
+To use the databases you need to attach the files in this project on the path:C:\Program Files\Microsoft SQL Server\MSSQL15.MYDB\MSSQL\DATA
